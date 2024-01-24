@@ -3,7 +3,7 @@ import { remove } from '@/redux/CartSlice'
 import Link from 'next/link'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
+import { TbShoppingBagX } from "react-icons/tb";
 
 export default function Cart() {
  const dispatch = useDispatch()
@@ -30,11 +30,12 @@ export default function Cart() {
                 ))
             }
         </div>: 
-        (<><h2 style={{ textAlign: 'center', marginTop: '100px' }}>No products</h2>
+        (<div style={{display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center',marginTop:'200px'}}>
         
-        <Link style={{textDecoration:'none',textAlign:'center'}} href='/'>Go To Home</Link>
+        <TbShoppingBagX size={150} />
         
-        </>
+        <Link style={{textDecoration:'none',marginTop:'50px',fontSize:'25px'}} href='/'>Go To Home</Link>
+        </div>
         )
         }
     </div>
