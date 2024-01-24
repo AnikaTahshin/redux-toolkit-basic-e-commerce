@@ -23,7 +23,7 @@ export default function Product() {
     <div className="col-md-3" style={{marginBottom:'10px'}}>
       <Card key={prod.id} className="h-100" style={{textAlign:'center' }}>
         <div>
-        <Card.Img variant="top" style={{width:'100px', height:'130px'}} src={prod.image} />
+        <Card.Img variant="top" style={{width:'100px', height:'130px',marginTop:'15px'}} src={prod.image} />
 
             </div>
         <Card.Body style={{textAlign:'center'}}>

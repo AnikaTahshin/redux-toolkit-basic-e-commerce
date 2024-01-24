@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
-
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 const Navbar = () => {
 
     const item = useSelector((state) => state.cart)
@@ -16,6 +16,8 @@ const Navbar = () => {
         justifyContent: "space-between",
         alignContent: "center",
         padding: "20px",
+        backgroundColor:'gray',
+        
       }}
     >
       <span style={{ fontSize: "25px" }}>React Redux Shop</span>
@@ -28,7 +30,10 @@ const Navbar = () => {
         
         {/* <Link href={"/"}>Home</Link>
         <Link href={"/cart"}>Cart</Link> */}
-        <span style={{fontSize:'25px'}}>items: {item.length}</span>
+        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+        <HiOutlineShoppingBag  size={25} />
+        <span style={{position:'absolute',top:18,right:64}}> {item.length}</span>
+        </div>
       </div>
     </div>
   );
